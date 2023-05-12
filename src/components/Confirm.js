@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom"
 import { useContext } from "react"
-import { NameContext,AgeContext,EmailContext, MobileContext } from "./FormDetails"
+import { NameContext,AgeContext,EmailContext,MobileContext} from "./FormDetails"
+
 const Confirm = () => {
 
   const UserName=useContext(NameContext)
   const UserAge=useContext(AgeContext)
   const UserEmail=useContext(EmailContext)
   const UserMobile=useContext(MobileContext)
+
 
   return (
     <>
@@ -17,7 +19,7 @@ const Confirm = () => {
           <li> <strong>E-MAIL ID:</strong>{UserEmail}</li>
           <li > <strong>MOBILE NUMBER :</strong>{UserMobile}</li>
         </ol>
-      <button className="btn"><Link to="/form/*">Back</Link></button>
+      <button className="btn"><Link to="/*">Back</Link></button>
 
       <button className="btn"><Link to="/success"> Submit</Link></button>
     </>
